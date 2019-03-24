@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-char * custom_strcat(char *s, char *p)
+void custom_strcat(char *s, char *p)
 {
     while (*s != '\0')
     {
@@ -11,9 +11,10 @@ char * custom_strcat(char *s, char *p)
         ;
 }
 
-void main()
+int main()
 {
-    char *a = "abcde";
-    char *b = "efg";
-    printf("%s\n", custom_strcat(a, b));
+    char a[] = "abcde";
+    char b[] = "efg";
+    custom_strcat(a, b);
+    printf("%s\n", a);
 }
