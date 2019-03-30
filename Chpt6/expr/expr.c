@@ -2,9 +2,9 @@
 #define MAXVAL 100
 
 int sp = 0;
-int val[MAXVAL];
+double val[MAXVAL];
 
-void push(int f)
+void push(double f)
 {
     if (sp < MAXVAL)
     {
@@ -16,7 +16,7 @@ void push(int f)
     }
 }
 
-int pop(void)
+double pop(void)
 {
     if (sp > 0)
     {
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
     {
         if (isdigit(*p))
         {
-            push(atoi(p));
+            push((double)atoi(p));
         }
         else
         {
@@ -67,6 +67,6 @@ int main(int argc, char *argv[])
             }
         }
     }
-    printf("Result of expr: %d\n", pop());
+    printf("Result of expr: %.2f\n", pop());
     return 0;
 }
