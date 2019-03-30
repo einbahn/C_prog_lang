@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
     int op2;
     char *p;
 
-    while (argc-- >= 0 && (p = *++argv))
+    while (p = *++argv)
     {
         if (isdigit(*p))
         {
